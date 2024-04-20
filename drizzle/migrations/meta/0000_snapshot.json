@@ -1,0 +1,385 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "pg_stat_statements_info": {
+      "name": "pg_stat_statements_info",
+      "schema": "",
+      "columns": {
+        "dealloc": {
+          "name": "dealloc",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stats_reset": {
+          "name": "stats_reset",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "pg_stat_statements": {
+      "name": "pg_stat_statements",
+      "schema": "",
+      "columns": {
+        "userid": {
+          "name": "userid",
+          "type": "oid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dbid": {
+          "name": "dbid",
+          "type": "oid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "toplevel": {
+          "name": "toplevel",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "queryid": {
+          "name": "queryid",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "query": {
+          "name": "query",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "plans": {
+          "name": "plans",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_plan_time": {
+          "name": "total_plan_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "min_plan_time": {
+          "name": "min_plan_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "max_plan_time": {
+          "name": "max_plan_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mean_plan_time": {
+          "name": "mean_plan_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stddev_plan_time": {
+          "name": "stddev_plan_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "calls": {
+          "name": "calls",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_exec_time": {
+          "name": "total_exec_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "min_exec_time": {
+          "name": "min_exec_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "max_exec_time": {
+          "name": "max_exec_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mean_exec_time": {
+          "name": "mean_exec_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stddev_exec_time": {
+          "name": "stddev_exec_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rows": {
+          "name": "rows",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shared_blks_hit": {
+          "name": "shared_blks_hit",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shared_blks_read": {
+          "name": "shared_blks_read",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shared_blks_dirtied": {
+          "name": "shared_blks_dirtied",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shared_blks_written": {
+          "name": "shared_blks_written",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "local_blks_hit": {
+          "name": "local_blks_hit",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "local_blks_read": {
+          "name": "local_blks_read",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "local_blks_dirtied": {
+          "name": "local_blks_dirtied",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "local_blks_written": {
+          "name": "local_blks_written",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "temp_blks_read": {
+          "name": "temp_blks_read",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "temp_blks_written": {
+          "name": "temp_blks_written",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "blk_read_time": {
+          "name": "blk_read_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "blk_write_time": {
+          "name": "blk_write_time",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "wal_records": {
+          "name": "wal_records",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "wal_fpi": {
+          "name": "wal_fpi",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "wal_bytes": {
+          "name": "wal_bytes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "character": {
+      "name": "character",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gender": {
+          "name": "gender",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ability": {
+          "name": "ability",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "minimal_distance": {
+          "name": "minimal_distance",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "weight": {
+          "name": "weight",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "born": {
+          "name": "born",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "in_space_since": {
+          "name": "in_space_since",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "beer_consumption": {
+          "name": "beer_consumption",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "knows_the_answer": {
+          "name": "knows_the_answer",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "nemesis": {
+      "name": "nemesis",
+      "schema": "",
+      "columns": {
+        "is_alive": {
+          "name": "is_alive",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "years": {
+          "name": "years",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "character_id": {
+          "name": "character_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "fki_Character Id": {
+          "name": "fki_Character Id",
+          "columns": [
+            "id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "secret": {
+      "name": "secret",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "secret_code": {
+          "name": "secret_code",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nemesis_id": {
+          "name": "nemesis_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
